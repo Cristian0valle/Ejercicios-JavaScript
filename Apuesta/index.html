@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Apuesta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var banco = 100;
+            var num_secreto = 0;
+
+            function genera() {
+                num_secreto = Math.random() * 3;
+                num_secreto = Math.round(num_secreto);
+
+                if (num_secreto === 0)
+                    num_secreto = 3;
+
+            }
+
+            function juego(valor, c) {
+                if (num_secreto === valor) {
+                    alert("Enhorabuena");
+                    banco += 100;
+                    genera();
+                } else {
+                    banco -= 50;
+                }
+                c.value = banco;
+            }
+
+        </script>
+    </head>
+    <body onload=genera();>
+        Apuesta:
+        <form>
+            <p>1<input type="radio" name="R1" onclick=juego(1,this.form.caja);>
+                <br>
+            <p>2<input type="radio" name="R1" onclick=juego(2,this.form.caja);>    
+                <br>
+            <p>3<input type="radio" name="R1" onclick=juego(3,this.form.caja);>    
+                <br>    
+                banco:
+                <input type="text" name="caja" size="20" value="100"></p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function espe(cespe) {
+                var tipo = cespe.value;
+                switch (tipo) {
+                    case "humano":
+                        alert("Eres un humano");
+                        break;
+
+                    case "planta":
+                        alert("Eres un vegetak");
+                        break;
+
+                    default:
+                        alert("Especia desconocida");
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            Especie: <input type="text" name="cespe" size="20" onblur=espe();><!--  -->
+            <input type="button" value="ver" onclick=espe(this.form.cespe);>
+        </form>
+    </body>
+</html>

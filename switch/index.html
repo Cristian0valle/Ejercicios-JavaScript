@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Switch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function opcion(valor) {
+                var cadena;
+                switch (valor) {
+                    case 1:
+                        cadena = "https://www.google.cl/";
+                        break;
+
+                    case 2:
+                        cadena = "https://www.youtube.com/";
+                    case 3:
+                        cadena = "https://www.google.com/intl/es-419/gmail/about/";
+                        break;
+
+                    case 4:
+                        cadena = "https://intranet.aiep.cl/";
+                }
+                alert("Vinculo " + cadena);
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <a href="uno.htm" onmouseover="opcion(1)">Ir a Google</a>
+            <a href="dos.htm" onmouseover="opcion(2)">Ir a Youtube</a>
+            <a href="tres.htm" onmouseover="opcion(3)">Ir a Gmail</a>
+            <a href="cuatro.htm" onmouseover="opcion(4)">Ir a intranet</a>
+        </form>
+    </body>
+</html>
